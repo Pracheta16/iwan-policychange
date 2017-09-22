@@ -1,0 +1,30 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method="POST" action="http://127.0.0.1:5000/result">
+<p>Required traffic change:</p>
+	<p>MC IP address:</p>
+	<select name = "domain_ip">
+		<option value="10.64.120.79">10.64.120.79</option>
+		<option value="1.1.1.1">1.1.1.1</option>
+	</select>
+	<p>Traffic class:</p>
+	<select name = "traffic_class">
+		<option value="http">http</option>
+		<option value="voice">voice</option>
+		<option value="video">video</option>
+	</select>
+	<p>Preferred Path:</p>
+	<select name = "preferred_path">
+		<option value="mpls">mpls</option>
+		<option value="inet">inet</option>
+	</select>
+	<p>Submit changes:</p>
+<p><input value="Submit" type="SUBMIT"></p>
+</form>
+
+{% endblock %}
+</body></html>
